@@ -122,11 +122,6 @@
     <a href="/tramblog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/tramblog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tramblog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
@@ -140,6 +135,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/tramblog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/tramblog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-books">
@@ -269,7 +269,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>859</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -292,7 +292,7 @@
 <h4 id="lib-flexible的使用"><a href="#lib-flexible的使用" class="headerlink" title="lib-flexible的使用"></a>lib-flexible的使用</h4><p>1). lib-flexible的安装</p>
 <p> <code>npm install lib-flexible --save</code></p>
 <p>2). 在项目的入口js(main.js)文件中引入lib-flexible</p>
-<p><code>import &#39;lib-flexible&#39;</code></p>
+<p><code>import 'lib-flexible'</code></p>
 <p>注意： </p>
 <a id="more"></a>
 
@@ -301,17 +301,35 @@
 <p><code>npm install px2rem-loader --save-dev</code></p>
 <p>2). px2rem-loader的配置</p>
 <p>这需要在build文件下的utils.js中进行配置</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> px2remLoader = &#123;</span><br><span class="line">    loader:<span class="string">'px2rem-loader'</span>,</span><br><span class="line">    options: &#123;</span><br><span class="line">      remUnit: <span class="number">75</span> <span class="comment">//这里一般根据UI稿给的尺寸走 我一般是iphone6 750px的尺寸</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> px2remLoader = {</span><br><span class="line">    loader:<span class="string">'px2rem-loader'</span>,</span><br><span class="line">    options: {</span><br><span class="line">      remUnit: <span class="number">75</span> <span class="comment">//这里一般根据UI稿给的尺寸走 我一般是iphone6 750px的尺寸</span></span><br><span class="line">    }</span><br><span class="line">  }</span><br></pre></td></tr></tbody></table></figure>
 
 <p>接着在  generateLoaders（）中添加px2remLoader </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateLoaders</span> (<span class="params">loader, loaderOptions</span>) </span>&#123; </span><br><span class="line">  <span class="keyword">const</span> loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader,px2remLoader] <span class="comment">//加上px2remLoader</span></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateLoaders</span> (<span class="params">loader, loaderOptions</span>) </span>{ </span><br><span class="line">  <span class="keyword">const</span> loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader,px2remLoader] <span class="comment">//加上px2remLoader</span></span><br><span class="line">  ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong><em>这里主要是将px单位转成rem</em></strong></p>
 <p>到这一步为止，手机的适配基本完成。</p>
 <hr>
 <p>但当我在引用第三方UI组件的时候，却出现样式缩小的情况。我后来看了一下，是因为第三方的UI组件样式也被转成了rem。这一步其实是不需要的，因为第三方的UI样式本身就经过了适配。<br>我在网上查了很久，试了很多方法，都无法解决。例如最多的解决办法是将<code>px2rem-loader</code>换成<code>postcss-px2rem-exclude</code>，但在我这个项目中却没有出现效果。<br>最后看到别人的一条评论才突然明白，正是因为第三方的UI组件已经经过适配，它们的dpr是1，而我的项目中自动生成的<code>data-dpr=2</code>,所以导致第三方样式缩小。</p>
-<p>所以 还是需要保留 项目的index.html文件的<code>meta name=&#39;viewport&#39;</code>标签。</p>
-
+<p>所以 还是需要保留 项目的index.html文件的<code>meta name='viewport'</code>标签。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -497,12 +515,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart " style="color: #F596AA;"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">4k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee" style="color: #F596AA;"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
 
 

@@ -1310,7 +1310,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #062dd0;
+  background: #18bf66;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2894,4 +2894,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.github-corner svg {
+  fill: #8abcd1;
 }

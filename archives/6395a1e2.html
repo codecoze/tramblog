@@ -22,18 +22,18 @@
     var CONFIG = {"hostname":"codecoze.github.io","root":"/tramblog/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":false,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#8abcd1","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言 因为不同浏览器都有一套自己的样式选择，所以有时候，我们在写标签的时候需要对标签进行 默认样式 处理；  button取消 button 所有的默认样式12345button &amp;#123;  appearance: none;  -moz-appearance: none; &#x2F;* Firefox *&#x2F;  -webkit-appearance: none; &#x2F;* Safari 和 Chrome">
+  <meta name="description" content="前言 因为不同浏览器都有一套自己的样式选择，所以有时候，我们在写标签的时候需要对标签进行 默认样式 处理；  button取消 button 所有的默认样式12345button {  appearance: none;  -moz-appearance: none; &#x2F;* Firefox *&#x2F;  -webkit-appearance: none; &#x2F;* Safari 和 Chrome *&#x2F; }">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html标签在不同浏览器下的适配（持续更新...)">
 <meta property="og:url" content="https://codecoze.github.io/tramblog/archives/6395a1e2.html">
 <meta property="og:site_name" content="TramZu_blog">
-<meta property="og:description" content="前言 因为不同浏览器都有一套自己的样式选择，所以有时候，我们在写标签的时候需要对标签进行 默认样式 处理；  button取消 button 所有的默认样式12345button &amp;#123;  appearance: none;  -moz-appearance: none; &#x2F;* Firefox *&#x2F;  -webkit-appearance: none; &#x2F;* Safari 和 Chrome">
+<meta property="og:description" content="前言 因为不同浏览器都有一套自己的样式选择，所以有时候，我们在写标签的时候需要对标签进行 默认样式 处理；  button取消 button 所有的默认样式12345button {  appearance: none;  -moz-appearance: none; &#x2F;* Firefox *&#x2F;  -webkit-appearance: none; &#x2F;* Safari 和 Chrome *&#x2F; }">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-12-23T08:42:57.000Z">
 <meta property="article:modified_time" content="2020-03-18T06:59:55.901Z">
 <meta property="article:author" content="TramZu">
-<meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Css">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://codecoze.github.io/tramblog/archives/6395a1e2.html">
@@ -123,11 +123,6 @@
     <a href="/tramblog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/tramblog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tramblog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
@@ -141,6 +136,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/tramblog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/tramblog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-books">
@@ -264,7 +264,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>97</span>
+              <span>496</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -286,15 +286,33 @@
         <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><blockquote>
 <p>因为不同浏览器都有一套自己的样式选择，所以有时候，我们在写标签的时候需要对标签进行 默认样式 处理；</p>
 </blockquote>
-<h5 id="button"><a href="#button" class="headerlink" title="button"></a>button</h5><h6 id="取消-button-所有的默认样式"><a href="#取消-button-所有的默认样式" class="headerlink" title="取消 button 所有的默认样式"></a>取消 button 所有的默认样式</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none; <span class="comment">/* Firefox */</span></span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none; <span class="comment">/* Safari 和 Chrome */</span> </span><br><span class="line">&#125; <span class="comment">/*取消掉默认的button样式，自己写的才能显示出来*/</span></span><br></pre></td></tr></table></figure>
+<h5 id="button"><a href="#button" class="headerlink" title="button"></a>button</h5><h6 id="取消-button-所有的默认样式"><a href="#取消-button-所有的默认样式" class="headerlink" title="取消 button 所有的默认样式"></a>取消 button 所有的默认样式</h6><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> {</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none; <span class="comment">/* Firefox */</span></span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none; <span class="comment">/* Safari 和 Chrome */</span> </span><br><span class="line">} <span class="comment">/*取消掉默认的button样式，自己写的才能显示出来*/</span></span><br></pre></td></tr></tbody></table></figure>
 
 <a id="more"></a>
 
 <p>针对性取消部分的button 默认样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-tap-highlight-color</span>: transparent; <span class="comment">/*取消按钮效果功能*/</span></span><br><span class="line">  <span class="attribute">-webkit-user-select</span>:auto; <span class="comment">/*取消用户选中功能*/</span></span><br><span class="line">  <span class="attribute">webkit-touch-callout</span>:none; <span class="comment">/*取消按钮文字放大效果功能*/</span></span><br><span class="line">  <span class="attribute">-webkit-user-select</span>:none;</span><br><span class="line">  <span class="attribute">-khtml-user-select</span>:none;</span><br><span class="line">  <span class="attribute">-moz-user-select</span>:none;</span><br><span class="line">  <span class="attribute">-ms-user-select</span>:none;</span><br><span class="line">  <span class="attribute">user-select</span>:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> {</span><br><span class="line">  <span class="attribute">-webkit-tap-highlight-color</span>: transparent; <span class="comment">/*取消按钮效果功能*/</span></span><br><span class="line">  <span class="attribute">-webkit-user-select</span>:auto; <span class="comment">/*取消用户选中功能*/</span></span><br><span class="line">  <span class="attribute">webkit-touch-callout</span>:none; <span class="comment">/*取消按钮文字放大效果功能*/</span></span><br><span class="line">  <span class="attribute">-webkit-user-select</span>:none;</span><br><span class="line">  <span class="attribute">-khtml-user-select</span>:none;</span><br><span class="line">  <span class="attribute">-moz-user-select</span>:none;</span><br><span class="line">  <span class="attribute">-ms-user-select</span>:none;</span><br><span class="line">  <span class="attribute">user-select</span>:none;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>阻止一些默认操作</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchstart'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;  <span class="comment">//阻止双击放大</span></span><br><span class="line">   <span class="keyword">if</span>(event.touches.length&gt;<span class="number">1</span>)&#123;</span><br><span class="line">      event.preventDefault();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> lastTouchEnd=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchend'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123; <span class="comment">//阻止双击放大</span></span><br><span class="line">   <span class="keyword">var</span> now=(<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();</span><br><span class="line">   <span class="keyword">if</span>(now-lastTouchEnd&lt;=<span class="number">300</span>)&#123;</span><br><span class="line">       event.preventDefault();</span><br><span class="line">    &#125;</span><br><span class="line">    lastTouchEnd=now;</span><br><span class="line">&#125;)</span><br><span class="line">$(<span class="string">'body'</span>).on(<span class="string">'touchend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;  <span class="comment">//阻止双击放大</span></span><br><span class="line">     e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchstart'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>{  <span class="comment">//阻止双击放大</span></span><br><span class="line">   <span class="keyword">if</span>(event.touches.length&gt;<span class="number">1</span>){</span><br><span class="line">      event.preventDefault();</span><br><span class="line">   }</span><br><span class="line">})</span><br><span class="line"><span class="keyword">var</span> lastTouchEnd=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchend'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>{ <span class="comment">//阻止双击放大</span></span><br><span class="line">   <span class="keyword">var</span> now=(<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();</span><br><span class="line">   <span class="keyword">if</span>(now-lastTouchEnd&lt;=<span class="number">300</span>){</span><br><span class="line">       event.preventDefault();</span><br><span class="line">    }</span><br><span class="line">    lastTouchEnd=now;</span><br><span class="line">})</span><br><span class="line">$(<span class="string">'body'</span>).on(<span class="string">'touchend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>{  <span class="comment">//阻止双击放大</span></span><br><span class="line">     e.preventDefault();</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -309,8 +327,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tramblog/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
               <a href="/tramblog/tags/Css/" rel="tag"><i class="fa fa-tag"></i> Css</a>
+              <a href="/tramblog/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           </div>
 
         
@@ -451,12 +469,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart " style="color: #F596AA;"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">4k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee" style="color: #F596AA;"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
 
 

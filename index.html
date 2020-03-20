@@ -119,11 +119,6 @@
     <a href="/tramblog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/tramblog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tramblog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
@@ -137,6 +132,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/tramblog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/tramblog/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-books">
@@ -260,7 +260,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>859</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -283,7 +283,7 @@
 <h4 id="lib-flexible的使用"><a href="#lib-flexible的使用" class="headerlink" title="lib-flexible的使用"></a>lib-flexible的使用</h4><p>1). lib-flexible的安装</p>
 <p> <code>npm install lib-flexible --save</code></p>
 <p>2). 在项目的入口js(main.js)文件中引入lib-flexible</p>
-<p><code>import &#39;lib-flexible&#39;</code></p>
+<p><code>import 'lib-flexible'</code></p>
 <p>注意： </p>
           <!--noindex-->
             <div class="post-button">
@@ -364,7 +364,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>97</span>
+              <span>496</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -386,7 +386,7 @@
           <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><blockquote>
 <p>因为不同浏览器都有一套自己的样式选择，所以有时候，我们在写标签的时候需要对标签进行 默认样式 处理；</p>
 </blockquote>
-<h5 id="button"><a href="#button" class="headerlink" title="button"></a>button</h5><h6 id="取消-button-所有的默认样式"><a href="#取消-button-所有的默认样式" class="headerlink" title="取消 button 所有的默认样式"></a>取消 button 所有的默认样式</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none; <span class="comment">/* Firefox */</span></span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none; <span class="comment">/* Safari 和 Chrome */</span> </span><br><span class="line">&#125; <span class="comment">/*取消掉默认的button样式，自己写的才能显示出来*/</span></span><br></pre></td></tr></table></figure>
+<h5 id="button"><a href="#button" class="headerlink" title="button"></a>button</h5><h6 id="取消-button-所有的默认样式"><a href="#取消-button-所有的默认样式" class="headerlink" title="取消 button 所有的默认样式"></a>取消 button 所有的默认样式</h6><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> {</span><br><span class="line">  <span class="attribute">appearance</span>: none;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>: none; <span class="comment">/* Firefox */</span></span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none; <span class="comment">/* Safari 和 Chrome */</span> </span><br><span class="line">} <span class="comment">/*取消掉默认的button样式，自己写的才能显示出来*/</span></span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/tramblog/archives/6395a1e2.html#more" rel="contents">
@@ -466,7 +466,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>24</span>
+              <span>423</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -485,7 +485,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="Vue图片的上传实现"><a href="#Vue图片的上传实现" class="headerlink" title="Vue图片的上传实现"></a>Vue图片的上传实现</h4><h5 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div class&#x3D;&quot;main&quot;&gt;</span><br><span class="line">      &lt;input id&#x3D;&quot;upload_pic&quot; ref&#x3D;&quot;uploadpic&quot; type&#x3D;&quot;file&quot; accept&#x3D;&#39;image&#x2F;*&#39; style&#x3D;&quot;display: none;&quot; name&#x3D;&quot;file&quot; @change&#x3D;&quot;fileChange()&quot; &#x2F;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;img_preview&quot; v-if&#x3D;&quot;ImgList.length&gt;0&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;img&quot; v-for&#x3D;&quot;(item,index) in ImgList&quot; :key&#x3D;&quot;index&quot; :style&#x3D;&quot;&#123;background:&#39;url(&#39;+item+&#39;)no-repeat center&#x2F;cover&#39;&#125;&quot;&gt;</span><br><span class="line">          &lt;div class&#x3D;&quot;delBtn&quot; @click&#x3D;&quot;deletepic(index)&quot;&gt;删除&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;uploadBtn&quot; @click.stop&#x3D;&quot;picBtn()&quot; v-if&#x3D;&quot;ImgList.length &lt; 3&quot;&gt;</span><br><span class="line">        &lt;i class&#x3D;&quot;upload-icons&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">        &lt;p class&#x3D;&quot;word&quot;&gt;上传照片&lt;&#x2F;p&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+          <h4 id="Vue图片的上传实现"><a href="#Vue图片的上传实现" class="headerlink" title="Vue图片的上传实现"></a>Vue图片的上传实现</h4><h5 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div class="main"&gt;</span><br><span class="line">      &lt;input id="upload_pic" ref="uploadpic" type="file" accept='image/*' style="display: none;" name="file" @change="fileChange()" /&gt;</span><br><span class="line">      &lt;div class="img_preview" v-if="ImgList.length&gt;0"&gt;</span><br><span class="line">        &lt;div class="img" v-for="(item,index) in ImgList" :key="index" :style="{background:'url('+item+')no-repeat center/cover'}"&gt;</span><br><span class="line">          &lt;div class="delBtn" @click="deletepic(index)"&gt;删除&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class="uploadBtn" @click.stop="picBtn()" v-if="ImgList.length &lt; 3"&gt;</span><br><span class="line">        &lt;i class="upload-icons"&gt;&lt;/i&gt;</span><br><span class="line">        &lt;p class="word"&gt;上传照片&lt;/p&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/tramblog/archives/ed4267f7.html#more" rel="contents">
@@ -565,7 +565,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>73</span>
+              <span>472</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -587,10 +587,10 @@
           <h4 id="scss、less中的mixin-方法-推荐"><a href="#scss、less中的mixin-方法-推荐" class="headerlink" title="scss、less中的mixin 方法(推荐)"></a>scss、less中的mixin 方法(推荐)</h4><ol>
 <li>SCSS</li>
 </ol>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> background_image(<span class="variable">$url</span>) &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: url(<span class="variable">$url</span> + <span class="string">"@2x.png"</span>);</span><br><span class="line">    <span class="keyword">@media</span> (-webkit-min-device-pixel-ratio: <span class="number">3</span>),(min-device-pixel-ratio: <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="attribute">background-image</span>: url(<span class="variable">$url</span> + <span class="string">"@3x.png"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">//可以根据自己具体的需求进行改变</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> background_image(<span class="variable">$url</span>) {</span><br><span class="line">    <span class="attribute">background-image</span>: url(<span class="variable">$url</span> + <span class="string">"@2x.png"</span>);</span><br><span class="line">    <span class="keyword">@media</span> (-webkit-min-device-pixel-ratio: <span class="number">3</span>),(min-device-pixel-ratio: <span class="number">3</span>) {</span><br><span class="line">        <span class="attribute">background-image</span>: url(<span class="variable">$url</span> + <span class="string">"@3x.png"</span>);</span><br><span class="line">    }</span><br><span class="line">} <span class="comment">//可以根据自己具体的需求进行改变</span></span><br></pre></td></tr></tbody></table></figure>
 
 <ol start="2">
-<li><p>LESS</p>
+<li><p>LESS</p></li></ol>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/tramblog/archives/64aa4ef7.html#more" rel="contents">
@@ -670,7 +670,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>159</span>
+              <span>558</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -692,7 +692,7 @@
           <h5 id="问题所在"><a href="#问题所在" class="headerlink" title="问题所在"></a>问题所在</h5><ul>
 <li>一般情况下 页面文本布局需要设置多行省略的样式</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span> &#123;</span><br><span class="line">		display: -webkit-box; //将对象作为弹性伸缩盒子模型显示 与 -webkit-box-orient 搭配使用</span><br><span class="line">		<span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line">		text-overflow: ellipsis; //这个样式属性的意思是文本溢出后以省略号的样式呈现</span><br><span class="line">		-webkit-box-orient: vertical; //设置或检索伸缩盒对象的子元素的排列方式 ，与 -webkit-box-orient 搭配使用</span><br><span class="line">		-webkit-line-clamp: 2; //用来限制在一个块元素显示的文本的行数。	即省略号出现的行数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span> {</span><br><span class="line">		display: -webkit-box; //将对象作为弹性伸缩盒子模型显示 与 -webkit-box-orient 搭配使用</span><br><span class="line">		<span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line">		text-overflow: ellipsis; //这个样式属性的意思是文本溢出后以省略号的样式呈现</span><br><span class="line">		-webkit-box-orient: vertical; //设置或检索伸缩盒对象的子元素的排列方式 ，与 -webkit-box-orient 搭配使用</span><br><span class="line">		-webkit-line-clamp: 2; //用来限制在一个块元素显示的文本的行数。	即省略号出现的行数</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/tramblog/archives/2a1ab756.html#more" rel="contents">
@@ -763,7 +763,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>91</span>
+              <span>490</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -933,12 +933,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart " style="color: #F596AA;"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">4k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee" style="color: #F596AA;"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
 
 
